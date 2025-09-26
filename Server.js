@@ -170,7 +170,7 @@ app.post("/generate-script", async (req,res)=>{
   try{
     const response = await fetch("https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generate", {
       method:"POST",
-      headers:{"Authorization":`Bearer ${GEMINI_API_KEY}`,"Content-Type":"application/json"},
+      headers:{"Authorization":`Bearer ${GEMINI_API_KEY}","Content-Type":"application/json"},
       body: JSON.stringify({prompt:{text:fullPrompt},temperature:0.2,maxOutputTokens:512})
     });
 
